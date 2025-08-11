@@ -1,0 +1,79 @@
+Basics of Neural Networks (Beginner’s Guide)
+A Neural Network is made up of layers of neurons that process data to make predictions or decisions.
+
+Input Layer → Hidden Layer(s) → Output Layer
+
+Step 1: Assigning Weights
+Before data reaches the hidden layers, the network assigns weights to each connection.
+
+Inside a hidden layer, two main steps happen:
+
+Multiply inputs by weights
+Example:
+input1 × weight1 + input2 × weight2 + ...
+
+Pass the result to an activation function (explained later).
+
+What do weights mean?
+Weights control how strongly a neuron influences the output.
+
+Example:
+If you touch a hot object with your right hand, the neurons in your right hand should have higher weights to signal danger, while the left-hand neurons stay quiet.
+
+Bias
+If weights are 0, the multiplication result will always be 0.
+To avoid this, we add a bias — a small constant value that shifts the activation function and allows better learning.
+
+Step 2: Activation Function
+Activation functions decide when a neuron should "fire" or activate.
+
+Example:
+Sigmoid – Used for binary classification.
+Output range: 0 to 1
+If output ≥ 0.5 → classify as 1
+If output < 0.5 → classify as 0
+
+Step 3: Forward Propagation
+The process of:
+
+Taking the input
+
+Multiplying by weights
+
+Adding bias
+
+Passing through activation function
+
+is called forward propagation.
+
+Step 4: Loss Function
+The loss function measures how far the predicted value is from the actual value.
+
+Lower loss = better prediction
+
+Examples:
+
+Mean Squared Error (MSE)
+
+Cross-Entropy Loss
+
+Step 5: Backpropagation
+If the loss is high, the network updates weights to improve accuracy.
+This is called backpropagation:
+
+It calculates how much each weight contributed to the error
+
+Then adjusts the weights accordingly.
+
+Step 6: Optimizers
+Optimizers decide how to update the weights efficiently during backpropagation.
+Example: Gradient Descent – gradually changes weights to reduce loss.
+
+Summary Flow
+Input → Multiply by Weights → Add Bias → Activation Function → Output (Forward Propagation)
+
+Compare Prediction with Actual → Calculate Loss
+
+Adjust Weights (Backpropagation) using an Optimizer
+
+Neural Networks learn by repeating this process thousands or even millions of times until the predictions are accurate enough.
